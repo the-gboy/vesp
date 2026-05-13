@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VESP — Your tasks, captured in WhatsApp</title>
+  <meta name="description" content="VESP turns voice notes, forwards and texts into tasks and reminders. Inside WhatsApp. No app to install." />
+  <link rel="icon" type="image/png" href="vesp-icon.png" />
+  <meta property="og:title" content="VESP — Your tasks, captured in WhatsApp" />
+  <meta property="og:description" content="Send a voice note. Forward a message. Type a thought. VESP turns it into a reminder." />
+  <meta property="og:image" content="vesp-lockup.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <a href="#" class="brand" aria-label="VESP home">
+      <img src="vesp-comet.svg" alt="" class="brand-mark" />
+      <span class="brand-name">VESP</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#what">What</a>
+      <a href="#how">How</a>
+      <a href="#features">Features</a>
+      <a href="#cta" class="nav-cta">Get early access</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-orbit" aria-hidden="true">
+        <div class="orbit-ring r1"></div>
+        <div class="orbit-ring r2"></div>
+        <div class="orbit-ring r3"></div>
+      </div>
+
+      <div class="hero-logo" aria-hidden="true">
+        <img src="vesp-comet.svg" alt="" class="hero-mark" />
+        <div class="hero-glow"></div>
+      </div>
+
+      <h1 class="headline">
+        <span class="line">Your tasks,</span>
+        <span class="line gradient">captured in WhatsApp.</span>
+      </h1>
+
+      <p class="sub">Send a voice note. Forward a message. Type a thought.<br/>VESP turns it into a reminder.</p>
+
+      <div class="hero-cta">
+        <a href="#cta" class="btn primary">Get early access</a>
+        <a href="#how" class="btn ghost">See how it works →</a>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- WHAT -->
+    <section id="what" class="what reveal">
+      <p class="eyebrow">What is VESP</p>
+      <h2 class="section-title">
+        A tiny brain that lives in your <span class="grad-text">WhatsApp.</span>
+      </h2>
+      <p class="section-lead">
+        No new app. No new login. Just a chat that turns messy thoughts into a clean list of things to do.
+      </p>
+    </section>
+
+    <!-- THREE INPUTS -->
+    <section id="how" class="inputs">
+      <p class="eyebrow center reveal">How you talk to it</p>
+      <h2 class="section-title center reveal">Three ways in. <span class="grad-text">One brain.</span></h2>
+
+      <div class="cards">
+        <article class="card reveal" data-delay="0">
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="19" y="8" width="10" height="22" rx="5" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 24a12 12 0 0 0 24 0M24 36v4M18 40h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Voice</h3>
+          <p>Ramble for ten seconds. We transcribe, extract the task, set the time.</p>
+        </article>
+
+        <article class="card reveal" data-delay="120">
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M8 28V14a2 2 0 0 1 2-2h20l8 8v14a2 2 0 0 1-2 2H20" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M28 12v8h8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M6 36l10-6v4h12v4H16v4z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Forward</h3>
+          <p>Forward any message into VESP. It pulls the task out automatically.</p>
+        </article>
+
+        <article class="card reveal" data-delay="240">
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="6" y="10" width="36" height="26" rx="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M14 32l-4 6 10-6" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="currentColor"/>
+              <path d="M14 20h20M14 26h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Type</h3>
+          <p>"remind me to call mom tomorrow at 4" — done. Natural language, no syntax.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CHAT MOCKUP -->
+    <section class="demo">
+      <div class="phone reveal">
+        <div class="phone-frame">
+          <div class="phone-header">
+            <img src="vesp-icon.png" alt="" class="phone-avatar"/>
+            <div>
+              <div class="phone-name">VESP</div>
+              <div class="phone-status">online</div>
+            </div>
+          </div>
+          <div class="phone-body" id="phone-body">
+            <div class="bubble in">Send Q3 deck to the team by Friday 5pm 🎯</div>
+            <div class="bubble out">
+              Got it: <b>«Send Q3 deck to the team»</b><br/>
+              Due Fri, 5:00 PM. Save?
+              <div class="quick">
+                <span>Save</span><span>Edit</span><span>Cancel</span>
+              </div>
+            </div>
+            <div class="bubble in voice">
+              <span class="play">▶</span>
+              <div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <span class="dur">0:12</span>
+            </div>
+            <div class="bubble out">
+              Heard: <b>"call mom tomorrow at 4"</b>. Reminder set for tomorrow 4:00 PM.
+            </div>
+          </div>
+        </div>
+        <div class="phone-shadow"></div>
+      </div>
+
+      <div class="demo-copy">
+        <p class="eyebrow reveal">The whole product</p>
+        <h2 class="section-title reveal">It looks like<br/><span class="grad-text">a conversation.</span></h2>
+        <p class="section-lead reveal">Because it is. No dashboards. No settings panels. Just chat.</p>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="features">
+      <p class="eyebrow center reveal">Everything inside</p>
+      <h2 class="section-title center reveal">Small surface. <span class="grad-text">Deep brain.</span></h2>
+
+      <div class="grid">
+        <div class="tile reveal">
+          <span class="tile-num">01</span>
+          <h4>Smart reminders</h4>
+          <p>One ping. Snooze, done, reschedule — one tap.</p>
+        </div>
+        <div class="tile reveal">
+          <span class="tile-num">02</span>
+          <h4>Voice → task</h4>
+          <p>Transcribed, parsed, scheduled in seconds.</p>
+        </div>
+        <div class="tile reveal">
+          <span class="tile-num">03</span>
+          <h4>Forward anything</h4>
+          <p>That long Slack thread? Forward it. We'll find the task.</p>
+        </div>
+        <div class="tile reveal">
+          <span class="tile-num">04</span>
+          <h4>Lists</h4>
+          <p>Grocery, packing, anything. Add, share, check off.</p>
+        </div>
+        <div class="tile reveal">
+          <span class="tile-num">05</span>
+          <h4>Assign to teammates</h4>
+          <p>Send a task to anyone. They don't need to be onboarded.</p>
+        </div>
+        <div class="tile reveal">
+          <span class="tile-num">06</span>
+          <h4>Recurring</h4>
+          <p>"Every Monday 9am." Set it once, forget it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEPS -->
+    <section class="steps">
+      <p class="eyebrow center reveal">Three steps</p>
+      <h2 class="section-title center reveal">Onboarding<br/><span class="grad-text">takes 20 seconds.</span></h2>
+
+      <ol class="step-list">
+        <li class="step reveal">
+          <span class="step-n">1</span>
+          <h4>Tap the link</h4>
+          <p>WhatsApp opens with VESP. Say hi.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-n">2</span>
+          <h4>Send your first task</h4>
+          <p>Voice, text, forward — your call.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-n">3</span>
+          <h4>Get reminded</h4>
+          <p>VESP pings you at the right moment.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="cta-final">
+      <div class="cta-glow" aria-hidden="true"></div>
+      <h2 class="reveal">Ready to <span class="grad-text">offload your brain?</span></h2>
+      <p class="reveal">Be the first to try VESP. We'll ping you when your number is up.</p>
+      <form class="cta-form reveal" onsubmit="event.preventDefault(); this.classList.add('done'); this.querySelector('input').value=''; this.querySelector('.cta-msg').textContent='Thanks — you\'re on the list.';">
+        <input type="email" required placeholder="you@somewhere.com" aria-label="email" />
+        <button type="submit">Request access →</button>
+        <span class="cta-msg" aria-live="polite"></span>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="vesp-comet.svg" alt="" />
+        <span>VESP</span>
+      </div>
+      <p>Built on WhatsApp. Powered by your voice.</p>
+      <p class="tiny">© <span id="yr"></span> VESP</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

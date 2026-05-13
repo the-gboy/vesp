@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <defs>
+    <radialGradient id="head" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#f4fbff"/>
+      <stop offset="35%" stop-color="#b8e8ff"/>
+      <stop offset="75%" stop-color="#6fb9ff"/>
+      <stop offset="100%" stop-color="#3d6fe6"/>
+    </radialGradient>
+    <linearGradient id="tail" x1="10%" y1="20%" x2="80%" y2="80%">
+      <stop offset="0%" stop-color="#6b8aff" stop-opacity="0.45"/>
+      <stop offset="35%" stop-color="#8ab8ff" stop-opacity="0.85"/>
+      <stop offset="75%" stop-color="#b8e3ff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#dff4ff" stop-opacity="1"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="62%" cy="58%" r="50%">
+      <stop offset="0%" stop-color="#9fdcff" stop-opacity="0.55"/>
+      <stop offset="55%" stop-color="#5a8eff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#5a8eff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+    <filter id="bloom" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- outer aura / glow -->
+  <circle cx="150" cy="140" r="115" fill="url(#aura)"/>
+
+  <!-- comet trail with jagged spikes -->
+  <g filter="url(#bloom)">
+    <path d="
+      M 148 138
+      L 62 48
+      L 96 90
+      L 38 78
+      L 92 108
+      L 50 132
+      L 108 128
+      L 78 168
+      L 124 152
+      Z"
+      fill="url(#tail)"
+      filter="url(#soft)"/>
+  </g>
+
+  <!-- comet head -->
+  <circle cx="150" cy="140" r="48" fill="url(#head)" filter="url(#bloom)"/>
+
+  <!-- inner highlight on head -->
+  <ellipse cx="138" cy="125" rx="14" ry="9" fill="#ffffff" opacity="0.35"/>
+
+  <!-- kawaii face -->
+  <ellipse cx="142" cy="140" rx="3" ry="3.6" fill="#101a4a"/>
+  <ellipse cx="161" cy="140" rx="3" ry="3.6" fill="#101a4a"/>
+  <path d="M 147 152 Q 151.5 156 156 152" stroke="#101a4a" stroke-width="2" stroke-linecap="round" fill="none"/>
+</svg>
